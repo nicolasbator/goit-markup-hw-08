@@ -1,0 +1,36 @@
+.nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 46px;
+  margin: 0 0 0 93px;
+  align-items: center;
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.14rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $textPrimary;
+    transition: color $transition;
+  }
+  &link--active {
+    color: $active;
+  }
+  &__link--active::after {
+    content: "";
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $active;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $active;
+  }
+}

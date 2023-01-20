@@ -1,0 +1,11 @@
+.logo {
+  text-decoration: none;
+  color: $active;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 1.625rem;
+
+  &--color {
+    color: $active;
+  }
+}

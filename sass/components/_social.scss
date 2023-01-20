@@ -1,0 +1,25 @@
+.social {
+  padding: 0 32px 30px;
+  justify-content: space-between;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+
+  .social__icon-link {
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    fill: $icon;
+    transition: background-color $transition, fill $transition;
+  }
+  .social__icon-link:hover,
+  .social__icon-link:focus,
+  .social__icon-link:active {
+    fill: $white;
+    background-color: $active;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
