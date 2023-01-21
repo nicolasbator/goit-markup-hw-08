@@ -1,11 +1,11 @@
 .social {
-  padding: 0 32px 30px;
+  padding: 0 122px 24px;
   justify-content: space-between;
   list-style: none;
   display: flex;
   gap: 10px;
 
-  .social__icon-link {
+  &__icon-link {
     display: block;
     width: 20px;
     height: 20px;
@@ -14,12 +14,24 @@
     fill: $icon;
     transition: background-color $transition, fill $transition;
   }
-  .social__icon-link:hover,
-  .social__icon-link:focus,
-  .social__icon-link:active {
+  &__icon-link:hover,
+  &__icon-link:focus,
+  &__icon-link:active {
     fill: $white;
     background-color: $active;
     border-radius: 50%;
     cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .social {
+    padding: 0 74px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .social {
+    padding: 0 32px 30px;
   }
 }

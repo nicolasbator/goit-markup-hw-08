@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.min.css" />
     <link rel="stylesheet" href="css/main.min.css.map" />
     <link rel="stylesheet" href="css/modern-normalize.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <title>WebStudio</title>
   </head>
   <body>
     <header class="menu">
-      <nav class=" menu__container">
-        <div class="menu__left">
-          <a class="logo" href="index.html"><span class="logo--color">Web</span>Studio</a>
+      <nav class="menu__container">
+        <a class="logo" href="index.html"><span class="logo--color">Web</span>Studio</a>
+        <div class="menu__desktop">
           <ul class="nav">
             <li class="nav__item">
               <a class="nav__link nav__link--active" href="index.html">Agencja</a>
@@ -28,26 +30,26 @@
               <a class="nav__link" href="contact.html">Kontakt</a>
             </li>
           </ul>
-        </div>
 
-        <ul class="menu__right">
-          <li>
-            <a class="menu__contact-link" href="mailto:info@devstudio.com">
-              <svg class="menu__icon" width="16px" height="12px">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a class="menu__contact-link" href="tel:+48111111111"
-              ><svg class="menu__icon" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-smartphone-2"></use>
-              </svg>
-              +48 111 111 111
-            </a>
-          </li>
-        </ul>
+          <ul class="menu__contact">
+            <li>
+              <a class="menu__contact-link" href="mailto:info@devstudio.com">
+                <svg class="menu__icon" width="16px" height="12px">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a class="menu__contact-link" href="tel:+48111111111"
+                ><svg class="menu__icon" width="10px" height="16px">
+                  <use href="./images/icons.svg#icon-smartphone-2"></use>
+                </svg>
+                +48 111 111 111
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -61,7 +63,7 @@
       <section class="description">
         <div class="description__container">
           <ul class="description__list">
-            <li>
+            <li class="description__item">
               <div class="description__icon-box">
                 <svg class="description__icon" height="70px" width="70px">
                   <use href="./images/icons.svg#icon-antenna-1"></use>
@@ -75,7 +77,7 @@
                 </p>
               </hgroup>
             </li>
-            <li>
+            <li class="description__item">
               <div class="description__icon-box">
                 <svg class="description__icon" height="70px" width="70px">
                   <use href="./images/icons.svg#icon-clock-1"></use>
@@ -89,7 +91,7 @@
                 </p>
               </hgroup>
             </li>
-            <li>
+            <li class="description__item">
               <div class="description__icon-box">
                 <svg class="description__icon" height="70px" width="70px">
                   <use href="./images/icons.svg#icon-diagram-1"></use>
@@ -103,7 +105,7 @@
                 </p>
               </hgroup>
             </li>
-            <li>
+            <li class="description__item">
               <div class="description__icon-box">
                 <svg class="description__icon" height="70px" width="70px">
                   <use href="./images/icons.svg#icon-astronaut-1"></use>
@@ -344,42 +346,42 @@
         <div class="clients__container">
           <h2 class="clients__header">Nasi klienci</h2>
           <ul class="clients__list">
-            <li>
+            <li class="clients__item">
               <a href="#" class="clients__icon">
                 <svg height="60.04px" width="106px">
                   <use href="images/icons.svg#icon-Logo"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a href="#" class="clients__icon">
                 <svg height="60.04px" width="106x">
                   <use href="images/icons.svg#icon-Logo-1"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a href="#" class="clients__icon">
                 <svg height="60px" width="106px">
                   <use href="images/icons.svg#icon-Logo-2"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a href="#" class="clients__icon">
                 <svg height="60px" width="106x">
                   <use href="images/icons.svg#icon-Logo-3"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a href="#" class="clients__icon">
                 <svg height="60px" width="106px">
                   <use href="images/icons.svg#icon-Logo-4"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a href="#" class="clients__icon">
                 <svg height="60px" width="106px">
                   <use href="images/icons.svg#icon-Logo-5"></use>
@@ -457,58 +459,72 @@
           </svg>
         </button>
         <h2 class="modal__header">Zostaw swoje dane w formularzu poniżej</h2>
-      <form class="modal__form">
-        <div role="group" aria-labelledby="name">
-          <label for="name" class="modal__label">Imię</label>
-          <div class="modal__box">
-            <input id="name" name="name" type="text" required class="modal__input">
-            <svg height="12px" width="12px" class="modal__icon">
-              <use href="./images/icons.svg#icon-person"></use>
+        <form class="modal__form">
+          <div role="group" aria-labelledby="name">
+            <label for="name" class="modal__label">Imię</label>
+            <div class="modal__box">
+              <input id="name" name="name" type="text" required class="modal__input" />
+              <svg height="12px" width="12px" class="modal__icon">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div role="group" aria-labelledby="tel">
+            <label for="tel" class="modal__label">Telefon</label>
+            <div class="modal__box">
+              <input
+                id="tel"
+                name="tel"
+                type="tel"
+                pattern="[0-9]{9}"
+                required
+                class="modal__input"
+              />
+              <svg height="13px" width="13px" class="modal__icon">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div role="group" aria-labelledby="email">
+            <label for="email" class="modal__label">Email</label>
+            <div class="modal__box">
+              <input id="email" name="email" type="email" required class="modal__input" />
+              <svg height="12px" width="15px" class="modal__icon">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div role="group" aria-labelledby="comment">
+            <label for="comment" class="modal__label">Komentarz</label>
+            <div>
+              <textarea
+                id="comment"
+                name="comment"
+                class="modal__textarea"
+                placeholder="Wprowadź tekst"
+              ></textarea>
+            </div>
+          </div>
+          <label class="modal__checkbox-label">
+            <input
+              type="checkbox"
+              id="policy-agreement"
+              name="policy-agreement"
+              value="agreed"
+              required
+              class="modal__checkbox"
+            />
+            <svg width="15" height="12" class="modal__custom-checkbox">
+              <use href="./images/icons.svg#icon-Vector"></use>
             </svg>
-          </div>
-        </div>
-        <div role="group" aria-labelledby="tel">
-          <label for="tel" class="modal__label">Telefon</label>
-          <div class="modal__box">
-            <input id="tel" name="tel" type="tel" pattern="[0-9]{9}" required class="modal__input">
-            <svg height="13px" width="13px" class="modal__icon">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-          </div>
-        </div>
-        <div role="group" aria-labelledby="email">
-          <label for="email" class="modal__label">Email</label>
-          <div class="modal__box">
-            <input id="email" name="email" type="email" required class="modal__input">
-            <svg height="12px" width="15px" class="modal__icon">
-              <use href="./images/icons.svg#icon-email"></use>
-            </svg>
-          </div>
-        </div>
-        <div role="group" aria-labelledby="comment">
-          <label for="comment" class="modal__label">Komentarz</label>
-          <div>
-            <textarea id="comment" name="comment" class="modal__textarea" placeholder="Wprowadź tekst"></textarea>
-          </div>
-        </div>
-        <label class="modal__checkbox-label">
-          <input type="checkbox" id="policy-agreement" name="policy-agreement" value="agreed"
-          required class="modal__checkbox"/>
-         <svg
-          width="15"
-          height="12"
-          class="modal__custom-checkbox">
-            <use href="./images/icons.svg#icon-Vector"></use>
-          </svg>
-        Oświadczam iż akceptuję 
-        <a href="" class="modal__link">Regulamin</a> 
-        i
-        <a href="" class="modal__link"> Politykę Prywatności.</a>
-      </label>
-      <button type="submit" class="modal__button">Wyślij</button>        
-      </form>
+            Oświadczam iż akceptuję
+            <a href="" class="modal__link">Regulamin</a>
+            i
+            <a href="" class="modal__link"> Politykę Prywatności.</a>
+          </label>
+          <button type="submit" class="modal__button">Wyślij</button>
+        </form>
       </div>
-      
     </div>
 
     <script src="./js/modal.js"></script>

@@ -7,7 +7,7 @@ body {
   color: $textPrimary;
 }
 .container {
-  max-width: 1200px;
+  max-width: 480px;
   margin: 0 auto;
 }
 .flex {
@@ -17,4 +17,15 @@ body {
 .section {
   padding: 94px 0;
   @extend .container;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }

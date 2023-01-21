@@ -6,24 +6,21 @@
 
   &__header {
     font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 33px;
     text-align: center;
     letter-spacing: 0.03em;
-    padding-top: 94px;
-    margin: 0 0 54px 0;
+    padding: 60px 0 30px;
   }
   &__list {
-    display: flex;
-    padding: 0 0 94px;
-    margin: 0;
-    justify-content: space-between;
+    display: block;
     list-style: none;
+    padding: 0 15px;
   }
   &__item {
-    margin: auto;
+    margin: 30px auto 0;
     height: auto;
-    width: 270px;
+    width: 450px;
     background: $white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -42,7 +39,48 @@
     padding: 30px 0 0;
   }
   &__text--lower {
+    font-weight: 400;
     color: $textSecondary;
     padding: 10px 0 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 15px;
+      gap: 0 30px;
+    }
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+
+      width: 354px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    background-color: var(--background-gray-color);
+
+    &__header {
+      font-size: 36px;
+      line-height: 42px;
+      padding-top: 94px;
+      margin: 0 0 54px 0;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 0 0 94px;
+      justify-content: space-between;
+    }
+    &__item {
+      margin: auto;
+      height: auto;
+      width: 270px;
+    }
   }
 }

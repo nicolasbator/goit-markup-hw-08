@@ -1,11 +1,16 @@
 .logo {
   text-decoration: none;
-  color: $active;
+  color: $logo;
   font-family: Raleway;
   font-weight: 700;
-  font-size: 1.625rem;
+  font-size: 24px;
 
   &--color {
     color: $active;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
   }
 }

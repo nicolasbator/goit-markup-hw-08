@@ -1,45 +1,76 @@
 .menu {
   border-bottom: 1px solid $borderMenu;
+  padding: 16px 0;
 
   &__container {
     @extend .container;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 31px;
-    padding-top: 24px;
-    padding-bottom: 25px;
   }
+  &__desktop {
+    display: none;
+  }
+}
 
-  &__left {
-    margin: 0;
-    @extend .flex;
-  }
-  &__right {
-    list-style: none;
-    margin: 0;
+@media screen and (min-width: 768px) {
+  .menu {
     padding: 0;
-    gap: 50px;
-    @extend .flex;
-  }
-  &__contact-link {
-    color: $textSecondary;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.14rem;
-    letter-spacing: 0.02em;
-    transition: color $transition;
-  }
-  &__icon {
-    fill: currentColor;
-    vertical-align: middle;
-    margin-right: 10px;
-    transition: color $transition;
-  }
+    display: flex;
+    align-items: center;
+    height: 80px;
+    &__container {
+      display: flex;
+      align-items: center;
+    }
 
-  &__contact-link:hover,
-  &__contact-link:focus {
-    color: $active;
+    &__desktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 101px;
+    }
+    &__contact {
+      list-style: none;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    &__contact-link {
+      color: $textSecondary;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.14rem;
+      letter-spacing: 0.02em;
+      transition: color $transition;
+    }
+    &__icon {
+      fill: currentColor;
+      vertical-align: middle;
+      margin-right: 10px;
+      transition: color $transition;
+    }
+
+    &__contact-link:hover,
+    &__contact-link:focus {
+      color: $active;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    &__container {
+    }
+
+    &__desktop {
+      gap: 345px;
+    }
+    &__contact {
+      gap: 50px;
+      flex-direction: row;
+    }
+    &__contact-link {
+      font-size: 14px;
+    }
   }
 }

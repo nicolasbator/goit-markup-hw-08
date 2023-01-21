@@ -1,35 +1,70 @@
 .description {
   &__container {
     @extend .container;
+    padding: 60px 0 30px;
   }
+
   &__list {
+    display: block;
     list-style: none;
-    display: flex;
-    padding: 86px 0 0;
-    margin: 0;
-    gap: 30px;
   }
+
   &__icon-box {
-    margin: 0 0 30px;
-    width: 70px;
-    padding: 25px 103.75px;
+    text-align: center;
+    padding: 25px 0;
     border-radius: 4px;
     background-color: $backgroundGray;
+    margin-bottom: 30px;
   }
 
   &__header {
-    margin: 0 0 10px;
+    text-align: center;
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    padding-bottom: 10px;
   }
   &__text {
-    margin: 0;
+    padding-bottom: 30px;
     font-size: 0.875rem;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $textSecondary;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    &__container {
+      padding: 60px 15px 60px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 30px;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    &__header {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .description {
+    &__container {
+      padding: 94px 15px 94px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 30px;
+    }
   }
 }
