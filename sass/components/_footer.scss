@@ -4,25 +4,36 @@
   &__container {
     @extend .container;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 0;
+  }
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
   }
 
   &__contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
-    padding: 60px 0;
   }
   &__address {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 9px;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
     color: $white;
     font-style: normal;
     font-size: 14px;
   }
-
   &__contact-link {
     text-decoration: none;
     font-style: normal;
@@ -33,12 +44,15 @@
   &__contact-link:focus {
     color: $active;
   }
-
   &__social {
-    margin-left: 70px;
-    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
   }
   &__text {
+    text-align: center;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -46,11 +60,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white;
-    padding-bottom: 20px;
   }
 
   &__icons {
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     display: flex;
     gap: 10px;
@@ -74,20 +87,20 @@
   }
 
   &__newslatter {
-    margin-left: 78px;
-    padding-top: 72px;
+    text-align: center;
   }
 
   &__form {
     padding-top: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
   }
 
   &__input {
     padding: 0 15px;
-    width: 358px;
+    width: 450px;
     height: 50px;
     color: $white;
     border: 1px solid $borderGray;
@@ -118,5 +131,58 @@
     margin-left: 24px;
     vertical-align: middle;
     fill: currentcolor;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__subcontainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 144px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .footer {
+      &__container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 78px;
+      }
+      &__subcontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 70px;
+      }
+
+      &__contact {
+        align-items: flex-start;
+      }
+      &__address {
+        align-items: flex-start;
+        gap: 9px;
+      }
+
+      &__social {
+        align-items: flex-start;
+      }
+
+      &__newslatter {
+        text-align: start;
+      }
+
+      &__form {
+        padding-top: 20px;
+        flex-direction: row;
+        gap: 12px;
+      }
+
+      &__input {
+        width: 358px;
+      }
+    }
   }
 }

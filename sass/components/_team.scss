@@ -1,5 +1,5 @@
 .team {
-  background-color: var(--background-gray-color);
+  background-color: $backgroundGray;
   &__container {
     @extend .container;
   }
@@ -15,19 +15,18 @@
   &__list {
     display: block;
     list-style: none;
-    padding: 0 15px;
+    padding: 0 15px 60px;
   }
   &__item {
     margin: 30px auto 0;
-    height: auto;
-    width: 450px;
     background: $white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
   }
   &__pic {
-    vertical-align: middle;
+    display: block;
+    width: 100%;
   }
   &__text {
     font-weight: 500;
@@ -50,7 +49,6 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
-      padding: 0 15px;
       gap: 0 30px;
     }
     &__item {
@@ -63,8 +61,6 @@
 
 @media screen and (min-width: 1200px) {
   .team {
-    background-color: var(--background-gray-color);
-
     &__header {
       font-size: 36px;
       line-height: 42px;
